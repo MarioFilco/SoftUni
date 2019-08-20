@@ -1,11 +1,13 @@
 from itertools import combinations
 from operator import mul
+from functools import reduce
 n = [4, 3, 5]
 k = 2
 for x in combinations(n, k):
   print(list(x))
-  print(mul(x))
-print(list(mul(list(x))) for x in combinations(n, k))
+  print(reduce(lambda a,b: a*b,list(x)))
+
+print((list(x)) for x in combinations(n, k))
 
 
 fact = lambda x: 1 if x <= 1 else x * fact(x-1)
