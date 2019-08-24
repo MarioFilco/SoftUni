@@ -3,9 +3,9 @@ import json
 import time
 from datetime import datetime, timedelta
 
-date = datetime(2018, 10, 29)
+date = datetime(2018, 1, 10)
 
-for d in range(1, 1 + 1):
+for d in range(1, 300 + 1):
     date_ = date - timedelta(days=d)
     date_str = datetime.strftime(date_, "%d-%m-%Y")
 
